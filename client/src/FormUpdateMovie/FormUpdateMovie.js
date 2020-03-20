@@ -1,26 +1,29 @@
 import React from "react";
+import { Link } from "react-router-dom";
+
 /* import ErrorMessage from "./ErrorMessage";
 import SuccessMessage from "./SuccessMessage"; */
 
 class FormUpdateMovie extends React.Component {
   constructor(props) {
-    super(props);
+    super(props)
     this.state = {
       movie: {
+
         id: 5,
         title: "Tombstone",
         director: "George P. Cosmatos",
         metascore: 89,
         stars: ["Kurt Russell", "Bill Paxton", "Sam Elliot"]
       }
+  
     };
   }
 
   handleChange = e => {
     this.setState({
       movie: {
-        ...this.state.movie,
-        [e.target.name]: e.target.value
+        ...this.state.movie, [e.target.name]: e.target.value
       }
     });
   };
@@ -71,9 +74,8 @@ class FormUpdateMovie extends React.Component {
             <SuccessMessage message={this.props.putSuccessMessage} />
           ) : null}{" "}
           */}
-          <Link to="/:id">
-            <button type="button">Update Movie</button>
-          </Link>
+          <button>Update</button>
+          
         </form>
       </div>
     );

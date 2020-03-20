@@ -21,6 +21,8 @@ const App = () => {
     setSavedList([...savedList, movie]);
   };
 
+  
+
   useEffect(() => {
     getMovieList();
   }, []);
@@ -38,7 +40,7 @@ const App = () => {
       </Route>
 
       <Route path="/update-movie/:id">
-        <FormUpdateMovie  />
+        <FormUpdateMovie />
       </Route>
     </>
   );
