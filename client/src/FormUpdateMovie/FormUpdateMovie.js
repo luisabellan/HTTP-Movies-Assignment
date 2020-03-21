@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useHistory} from "react";
 import { Link } from "react-router-dom";
 
 /* import ErrorMessage from "./ErrorMessage";
@@ -7,15 +7,16 @@ import SuccessMessage from "./SuccessMessage"; */
 class FormUpdateMovie extends React.Component {
   constructor(props) {
     super(props)
+    console.log(props)
     this.state = {
       movie: {
 
-        id: 5,
-        title: "Tombstone",
-        director: "George P. Cosmatos",
-        metascore: 89,
-        stars: ["Kurt Russell", "Bill Paxton", "Sam Elliot"]
-      }
+        id: this.movie.id,
+        title: this.movie.title,
+        director: this.movie.director,
+        metascore: this.movie.metascore,
+        stars: this.movie.stars,
+      },
   
     };
   }
@@ -74,8 +75,9 @@ class FormUpdateMovie extends React.Component {
             <SuccessMessage message={this.props.putSuccessMessage} />
           ) : null}{" "}
           */}
+          <Link to={`/movies/${this.state.movie.id}`}>
           <button>Update</button>
-          
+          </Link>
         </form>
       </div>
     );

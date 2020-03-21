@@ -8,8 +8,7 @@ body {
 .movie-card {
   background-color: #fff;
   border: 0;
-  -webkit-box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
-          box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
   padding: 1rem;
   cursor: pointer;
   position: relative;
@@ -24,26 +23,19 @@ body {
 .saved-list {
   background-color: #fff;
   border: 0;
-  -webkit-box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
-          box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
+  box-shadow: 0 -1px 0 #e0e0e0, 0 0 2px rgba(0, 0, 0, 0.12), 0 2px 4px rgba(0, 0, 0, 0.24);
   padding: 1rem;
   cursor: pointer;
   position: relative;
   margin: 1rem auto;
   width: 75%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
+  align-items: center;
+  justify-content: space-between;
 
-.saved-list h3 {
-  margin-right: 10px;
+  h3 {
+    margin-right: 10px;
+  }
 }
 
 .saved-movie {
@@ -69,26 +61,28 @@ body {
   border: 1px solid grey;
   padding: 5px 10px;
   background-color: lightseagreen;
-}
 
-.save-button:hover {
-  background-color: green;
-  color: white;
+  &:hover {
+    background-color: green;
+    color: white;
+  }
 }
 
 .update-button {
+
   position: absolute;
   top: 10rem;
   right: 25px;
   border: 1px solid grey;
   padding: 5px 10px;
   background-color: lightseagreen;
+
+  &:hover {
+    background-color: green;
+    color: white;
+  }
 }
 
-.update-button:hover {
-  background-color: green;
-  color: white;
-}
 
 .home-button {
   padding: 5px 10px;
@@ -99,4 +93,3 @@ body {
   color: red;
   text-align: center;
 }
-/*# sourceMappingURL=index.css.map */
