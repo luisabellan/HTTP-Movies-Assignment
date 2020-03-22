@@ -11,11 +11,11 @@ class FormUpdateMovie extends React.Component {
     this.state = {
       movie: {
 
-        id: this.movie.id,
-        title: this.movie.title,
-        director: this.movie.director,
-        metascore: this.movie.metascore,
-        stars: this.movie.stars,
+        id: this.props.id,
+        title: "",
+        director: "",
+        metascore: "",
+        stars: "",
       },
   
     };
@@ -24,7 +24,8 @@ class FormUpdateMovie extends React.Component {
   handleChange = e => {
     this.setState({
       movie: {
-        ...this.state.movie, [e.target.name]: e.target.value
+        ...this.props.movie,
+        [e.target.name]: e.target.value
       }
     });
   };
@@ -51,21 +52,21 @@ class FormUpdateMovie extends React.Component {
             name="director"
             placeholder="Director"
             onChange={this.handleChange}
-            value={this.state.movie.director}
+            value={this.state.director}
           />
           <input
             type="text"
-            name="movie"
-            placeholder="Movie"
+            name="metascore"
+            placeholder="Metascore"
             onChange={this.handleChange}
-            value={this.state.movie.metascore}
+            value={this.state.metascore}
           />
           <input
             type="text"
             name="stars"
-            placeholder="Movie"
+            placeholder="Stars"
             onChange={this.handleChange}
-            value={this.state.movie.stars}
+            value={this.state.stars}
           />
           {/*{" "}
           {this.props.putError ? (
@@ -75,8 +76,9 @@ class FormUpdateMovie extends React.Component {
             <SuccessMessage message={this.props.putSuccessMessage} />
           ) : null}{" "}
           */}
-          <Link to={`/movies/${this.state.movie.id}`}>
-          <button>Update</button>
+          {console.log(this.props.state.movie)}
+          <Link to={`/movies/${this.props.state.movie.id}`}>
+          <button type="submit">Update</button>
           </Link>
         </form>
       </div>
