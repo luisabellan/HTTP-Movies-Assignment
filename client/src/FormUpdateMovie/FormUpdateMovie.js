@@ -1,4 +1,4 @@
-import React, {useHistory} from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 
 /* import ErrorMessage from "./ErrorMessage";
@@ -11,7 +11,7 @@ class FormUpdateMovie extends React.Component {
     this.state = {
       movie: {
 
-        id: this.props.id,
+        id: "",
         title: "",
         director: "",
         metascore: "",
@@ -45,28 +45,28 @@ class FormUpdateMovie extends React.Component {
             name="title"
             placeholder="Title"
             onChange={this.handleChange}
-            value={this.state.movie.title}
+            value={this.props.title}
           />
           <input
             type="text"
             name="director"
             placeholder="Director"
             onChange={this.handleChange}
-            value={this.state.director}
+            value={this.props.director}
           />
           <input
             type="text"
             name="metascore"
             placeholder="Metascore"
             onChange={this.handleChange}
-            value={this.state.metascore}
+            value={this.props.metascore}
           />
           <input
             type="text"
             name="stars"
             placeholder="Stars"
             onChange={this.handleChange}
-            value={this.state.stars}
+            value={this.props.stars}
           />
           {/*{" "}
           {this.props.putError ? (
